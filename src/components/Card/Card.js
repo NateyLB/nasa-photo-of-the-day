@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ChangeDate from "./ChangeDate.js"
 import Title from "./Title.js";
 import Img from "./Img.js";
 import Info from "./Info.js";
@@ -32,18 +33,7 @@ function Card() {
         }, [selectDate])
     return (
         <div>
-         <label for="dates">Choose a date to view:</label>
-
-            <select id="dates" onChange = {() => setSelectDate(document.getElementById("dates").value)}>
-                <option value="none">Select a date</option>
-                <option value="2020-03-16" >March 17, 2020</option>
-                <option value="2020-03-16">March 16, 2020</option>
-                <option value="2020-03-15">March 15, 2020</option>
-                <option value="2020-03-14">March 14, 2020</option>
-                <option value="2020-03-13">March 13, 2020</option>
-                <option value="2020-03-12">March 13, 2020</option>
-                <option value="2020-03-11">March 12, 2020</option>
-            </select>
+            <ChangeDate setSelectDate={setSelectDate} />
             <Title title={title} />
             <Img img={img} />
             <Info author={author} date={date} />
