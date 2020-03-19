@@ -5,6 +5,7 @@ import Title from "./Title.js";
 import Img from "./Img.js";
 import Info from "./Info.js";
 import Description from "./Description.js";
+import CustomizedExpansionPanels from "./DescriptionMaterialUI.js";
 
 
 
@@ -39,6 +40,7 @@ function NasaCard() {
             <Img img={img} />
             <Info author={author} date={date} />
             <Description description={description} />
+            <CustomizedExpansionPanels description={description} />
         </div>
     );
 }

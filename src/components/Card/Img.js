@@ -7,7 +7,6 @@ function Img (props){
 
     const StyledImg = styled.img`
     border-radius:10px
-    
     `;
 
     return <StyledImg src={props.img} alt="image of the day"  />

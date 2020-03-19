@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
-import axios from "axios";
 
 
 function Description(props) {
