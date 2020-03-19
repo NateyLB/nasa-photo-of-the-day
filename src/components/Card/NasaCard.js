@@ -7,7 +7,8 @@ import Info from "./Info.js";
 import Description from "./Description.js";
 
 
-function Card() {
+
+function NasaCard() {
     const [title, setTitle] = useState('');
     const [img, setImg] = useState('');
     const [author, setAuthor] = useState('');
@@ -15,14 +16,13 @@ function Card() {
     const [description, setDescription] = useState('');
     const [selectDate, setSelectDate] = useState('2020-03-18')
 
-
         useEffect(() => {
             axios
                 .get(`https://api.nasa.gov/planetary/apod?api_key=HHSZm9gE0Z0rIyaxjbFkKRDFrVyhvR62A0YLzbAU&date=${selectDate}`)
                 .then(response => {
                     console.log(response.data);
                     setTitle(response.data.title);
-                    setImg(response.data.hdurl);
+                    setImg(response.data.url);
                     setAuthor(response.data.copyright);
                     setDate(response.data.date);
                     setDescription(response.data.explanation)
@@ -34,7 +34,8 @@ function Card() {
     return (
         <div>
             <ChangeDate setSelectDate={setSelectDate} />
-            <Title title={title} />
+            <Title title = "NASA's PHOTO OF THE DAY" type="blue"/>
+            <Title title={title} type = "black"/>
             <Img img={img} />
             <Info author={author} date={date} />
             <Description description={description} />
@@ -42,4 +43,4 @@ function Card() {
     );
 }
 
-export default Card;
+export default NasaCard;
