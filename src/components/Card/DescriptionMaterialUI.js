@@ -60,9 +60,7 @@ const ExpansionPanel = withStyles({
             <Typography>Description</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>
-                {props.description}
-            </Typography>
+            <Typography>{props.description}</Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
