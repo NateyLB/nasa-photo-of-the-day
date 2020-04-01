@@ -15,7 +15,7 @@ function NasaCard() {
     const [author, setAuthor] = useState('');
     const [date, setDate] = useState('');
     const [description, setDescription] = useState('');
-    const [selectDate, setSelectDate] = useState('2020-03-18')
+    const [selectDate, setSelectDate] = useState('2020-04-01')
 
         useEffect(() => {
             axios
@@ -40,7 +40,7 @@ function NasaCard() {
             <Img img={img} />
             <Info author={author} date={date} />
             <Description description={description} />
-            <CustomizedExpansionPanels description={description} />
+            {/* <CustomizedExpansionPanels description={description} /> */}
         </div>
     );
 }

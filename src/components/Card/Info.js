@@ -12,7 +12,7 @@ function Info(props) {
     `;
 
     const StyledH3 = styled.h3`
-    font-family: 'Space Mono', monospace;
+    font-family: Nasalization;
     
     `;
     return(

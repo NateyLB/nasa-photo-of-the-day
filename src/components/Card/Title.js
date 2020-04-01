@@ -5,7 +5,7 @@ import styled from 'styled-components';
 function Title (props){
 
     const StyledH1 = styled.h1`
-    font-family: 'Space Mono', monospace;
+    font-family: Nasalization;
 
     ${props => (props.type === 'black' ? `color: black;` : null)}
     ${props => (props.type === 'blue' ? `color:#17a2b8;` : null)}

@@ -1,5 +1,11 @@
+@font-face {
+  font-family: Nasalization;
+  src: url(./Fonts/nasalization-rg.ttf);
+}
+
 .App {
   text-align: center;
+  font-family: Nasalization;
 }
 
 .App-logo {
